@@ -6,11 +6,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 body{
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
 }
 
 #navbar{
@@ -20,12 +20,10 @@ body{
     max-height: 70px;
     justify-content: center;
     align-items: center;
-    font-family: 'Bebas Neue', sans-serif;
     position: fixed;
     top: 0;
     margin: 0px;
     width: 100%;
-    max-width: 1500px;
     height: 100%;
 }
 
@@ -37,39 +35,57 @@ body{
 }
 
 h1{
-    font-family: 'Bebas Neue', sans-serif;
     color: #FFFFFF;
     font-size: 60px;
     padding: 10px;
     letter-spacing: 5px;
+    margin: 1% auto 5% auto;
 }
 
 header{
-      background-image: linear-gradient(180deg, #E6457A,#8245E6);
+    background-image: linear-gradient(180deg, #E6457A,#8245E6);
     text-align: center;
+    justify-content: center;
+    align-items: center;
     border-top: 1px solid  #6767dd; 
     margin: 70px 0 0 0;
-
+    height: auto;
+    min-height: 150px;
 }
 
 footer{
-    margin-top: 20px;
-    height: 20%;
-    background-image: linear-gradient(180deg, #E6457A,#8245E6);
+    margin-top: 10px;
+    height: 100%;
+    background-image: linear-gradient(180deg,#8245E6, #E6457A);
     text-align: center;
-    border-top: 1px solid  #ff2978;
+    border-top: 1px solid  #8245E6;
+    min-height: 100px;
+    padding: 1%;
+    font-size: 20px;
 }
 
 .project-tile img{
-    padding: 1%;
-    margin: 1%;
-    border-radius: 15px;
+    margin: 0;
     cursor: pointer;
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 550px;
+    height:auto;
     object-fit: cover;
-    box-shadow: 0px 4px 8px 0 #00000033 , 0 6px 20px 0 #00000030;
+    border-radius: 15px;
+}
+
+.card{
+  box-shadow: 0px 4px 8px 0 #00000033 , 0 6px 20px 0 #00000030;
+  border-radius: 5%;
+  margin: 2% 2% 2% 2%;
+  padding: 2px;
+  width: 100%;
+  display: inline-block;
+  max-width: 550px;
+  height: auto;
+  align-content: center;
+  text-align: center;
+  gap: 10%;
 }
 
 .project-tile::after{
@@ -87,24 +103,25 @@ footer{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 16px;
 }
 
 #projects h2{
     width: 100%;
     font-size: 30px;
     margin: 0;
-    font-family: 'Bebas Neue', sans-serif;
     font-weight: bold;
     color: #180F4A;
     text-align: center;
 }
 
-h3{
-  font-family: 'Bebas Neue', sans-serif;
+#projects h3{
+  width: 100%;
+  font-size: 25px;
+  margin: 1%;
   color: #180F4A;
   text-align: center;
 }
+
 
 @media only screen and (max-width: 600px) {
   .project-tile img {
