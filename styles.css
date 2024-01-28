@@ -49,9 +49,9 @@ header{
     justify-content: center;
     align-items: center;
     border-top: 1px solid  #6767dd; 
-    margin: 70px 0 0 0;
+    margin: 70px 0 -40px 0;
     height: auto;
-    min-height: 150px;
+    min-height: 15px;
 }
 
 footer{
@@ -78,7 +78,7 @@ footer{
 
 .card{
   box-shadow: 0px 4px 8px 0 #00000033 , 0 6px 20px 0 #00000030;
-  border-radius: 2%;
+  border-radius: 15px;
   margin: 2% 2% 2% 2%;
   padding: 2px;
   width: 100%;
@@ -94,12 +94,12 @@ footer{
   font-size: 18px;
 }
 
-.project-tile::after{
+.project-tile::after, main::after{
   content:"";
   width: 350px;
 }
 
-#projects{
+#projects, main{
     width: 100%;
     text-align: center;
     max-width: 1400px;
@@ -129,34 +129,10 @@ footer{
 }
 
 
-@media only screen and (max-width: 600px) {
-  .project-tile img {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    object-fit: cover;
-    }
-  h1{
-    font-size: 40px;
-    }
-    #navbar{
-      letter-spacing: 0;
-
-    }
-    #navbar a{
-      font-size: 15px;
-      padding: 10px;
-    }
-    #projects h2{
-      font-size: 22px;
-    }
-    h3{
-      font-size: 20px;
-    }
-}
-
-#presentation, #qualifications, #education, #certification{
+#presentation,
+#qualifications,
+#education,
+#certification {
   width: 100%;
   text-align: center;
   max-width: 750px;
@@ -169,8 +145,22 @@ footer{
   align-items: center;
 }
 
+main .card {
+  max-width: 900px;
+  width: 100%;
+  margin: 0% 5% 2% 5%;
+  padding: 2px;
+  height: auto;
+  align-content: center;
+  text-align: center;
+  gap: 10%;
+}
+
+
 #presentation p{
   font-size: 20px;
+  padding: 5px;
+  letter-spacing: 1px;
 }
 
 #qualifications p{
@@ -180,8 +170,16 @@ footer{
   font-size: 20px;
 }
 
-#certification p{
+#education li{
+  margin-left: 15px;
+}
+
+#certification #title{
   font-size: 20px;
+}
+
+#certification p{
+  font-size: 15px;
 }
 
 #qualifications ul{
@@ -191,7 +189,6 @@ footer{
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
   width: 80%;
   margin-top: 2%;
 }
@@ -209,7 +206,87 @@ footer{
   border: 0;
 }
 
-#presentation, #qualifications, #education, #certification .card{
-  border-radius: 0;
+#certification ul{
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+  width: 90%;
+  margin-top: 2%;
 }
 
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background: white;
+  width: 120px;
+}
+
+.dropdown-content a{
+  color: black;
+  display: block;
+  text-align: left;
+  border: 1px solid rgb(207, 207, 207)
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.dropdown-content a:hover{
+  background-color: #6767dd;
+}
+
+@media only screen and (max-width: 720px) {
+  h1{
+    font-size: 40px;
+    }
+    #navbar{
+      letter-spacing: 0;
+    }
+    #navbar a{
+      font-size: 15px;
+      padding: 10px;
+    }
+    #projects h2{
+      font-size: 22px;
+      margin: 1%;
+    }
+    h3{
+      font-size: 18px;
+    }
+    .card{
+      max-width: 75%;
+      height: auto;
+      object-fit: cover;
+      padding: 5px;
+    }
+
+    main .card{
+      margin: 5%;
+      padding: 20px;
+    }
+
+    #navbar a{
+      font-size: 20px;
+    }
+
+    footer{
+      font-size: 15px;
+    }
+}
